@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
 \usepackage{amsmath}
+\usepackage{amssymb} % for \blacktriangleleft \blacktriangleright
 
 \begin{document}
 	\subsection{Варіаційні задачі на умовний екстремум}
@@ -50,7 +51,7 @@
 
 	До цих рівнянь додаємо умови зв’язку
 	\begin{equation}
-		\varphi(x, y_1, \ldots, y_n) = 0, (i = \overline{1, m}, m < n)
+		\varphi_i(x, y_1, \ldots, y_n) = 0, (i = \overline{1, m}, \quad m < n)
 	\end{equation}
 	і отримуємо систему $m+n$ рівнянь з $m+n$ невідомими $ y_1, \ldots, y_n, \lambda_1, \ldots \lambda_m $.
 	З граничних умов знаходимо значення $2n$ невідомих констант інтегрування.
@@ -60,7 +61,7 @@
 	за умови зв’язку $y_1 - y_2 - 2cos(x) = 0$ і граничних умов
 	$y_1(0) = 1, \\ y_2(0) = -1,\quad y_1(\pi/2) = y_2(\pi/2) = 1$.
 	
-	Запишемо функцію Лагранжа
+	$\blacktriangleright$ Запишемо функцію Лагранжа
 	$$F = y_1^2 + y_2^2 - {y'_1}^{2} - {y'_2}^{2} + \lambda(x)(y_1 - y_2 - 2cosx).$$
 	Знайдемо $\frac{\partial F}{\partial y_1} = 2y_1 + \lambda, \quad
 		\frac{\partial F}{\partial y_2} = 2y_2 - \lambda, \quad
@@ -78,7 +79,6 @@
 		y_1 - y_2 - 2cosx = 0,
 	\end{cases}$$
 	$$y_1(0) = 1,\quad y2(0) = -1,\quad y_1(\pi/2) = y_2(\pi/2) = 1.$$
-	
 	Додамо перші два рівняння і введемо нову невідому функцію $z$
 	$$2(y_1 + y_2)^{''} + 2(y_1 + y_2) = 0, \quad y_1 + y_2 = z.$$
 	Тоді маємо рівняння другого порядку із сталими коефіцієнтами $z'' + z = 0$,
@@ -92,7 +92,6 @@
 	\end{cases}$$
 	Тоді $f = y_1^{2} + y_2^{2} - {y'_1}^{2} -{y'_2}^{2} = (cosx + sinx)^2 + (sinx - cosx)^2 - $ 
 		$$-(-sinx + cosx)^2 - (cosx + sinx)^2 = 0.$$
-
 	Оскільки $F''_{y'_1y'_1} = -2 < 0,
 	\begin{vmatrix}
 		F''_{y'_1y'_1} & F''_{y'_1y'_2} \\
@@ -105,7 +104,7 @@
 	$\begin{cases}
 		y_1 = cosx + sinx  \\
 		y_2 = sinx - cosx
-	\end{cases}$ функціонал досягає сильного максимуму $I_{max}= 0.$
+	\end{cases}$ функціонал досягає сильного максимуму $I_{max}= 0.\blacktriangleleft$
 
 	\begin{center}
 		\underline{\textbf{Ізопериметричні задачі}}
@@ -119,9 +118,7 @@
 	Необхідно серед кривих $y = y(x) \in C^{1}[a, b]$ визначити ту, яка надає екстремуму функціоналу
 	$I[y] = \int_{a}^{b} f(x, y, y')dx$
 	і задовольняє граничні умови $y(a) = y_a$, $y(b) = y_b$
-	та інтегральне рівняння зв’язку $J[y] = \int_{a}^{b} \varphi(x, y, y')dx = l = const$.
-
-
+	та інтегральне рівняння зв’язку $J[y] = \int_{a}^{b} \varphi(x, y, y')dx = l = const$.\\
 	\textit{\textbf{Теорема Ейлера.}}
 		Якщо крива $y = y(x)$, яка задовольняє інтегральне рівняння зв’язку
 		$J[y] = \int_{a}^{b} \varphi(x, y, y')dx = l = const$
@@ -129,13 +126,12 @@
 		надає екстремуму функціонала $I[y] = \int_{a}^{b} f(x, y, y')dx$,
 		то існує така константа $\lambda$, що крива $y = y(x)$
 		є екстремаллю функціонала $I^*[y] = \int_{a}^{b} F(x, y, y')dx$,
-		де $F(x, y, y') = f(x, y, y') + \lambda \varphi(x, y , y')$ --- функція Лагранжа.
-
+		де $F(x, y, y') = f(x, y, y') + \lambda \varphi(x, y , y')$ --- функція Лагранжа.\\
 	\underline{\textbf{Закон взаємності ізопериметричних задач:}} Сукупність умовних екстремалей не залежить від того, чи шукати екстремум функціонала $I[y]$ для фіксованого значення функціонала $J[y]$ чи, навпаки, шукати екстремум для фіксованого значення $I[y]$.
 
 	\underline{\textbf{Приклад 2.}} Знайти екстремум функціонала $\int_{0}^{1} {y'}^{2}dx$ за граничних умов
 	$y(0) = 0,\quad y(1) = 5$ і обмеження $\int_{0}^{1} xydx = 1$.\\
-	Запишемо для функції Лагранжа $F = {y'}^{2} + \lambda x y $ рівняння Ейлера
+	$\blacktriangleright$ Запишемо для функції Лагранжа $F = {y'}^{2} + \lambda x y $ рівняння Ейлера
 	$$\lambda x - 2y'' = 0 \Rightarrow y = \frac{\lambda}{12} x^3 + C_1x + C_2.$$
 
 \end{document}
